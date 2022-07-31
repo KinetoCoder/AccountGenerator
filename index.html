@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Generator | Kineto </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" href="index.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="Icon2.png">
+    <script src="https://kit.fontawesome.com/1abf01c58f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+   
+</head>
+<body>
+    <div class="theFrame">
+        <div class="mainContainer">
+            <div class="upperFrame">
+                <div class="logo">
+                 <img src="kineto.png" alt="Kineto" id="logo">
+                </div>
+                 <section class="intro" >
+                     <h1>Generate a secure account</h1>
+                     <div class="introPar">
+                         <p>Use my online username and password generator to instantly create a secure, random Account.</p>
+                     </div>
+                     <div class="generatePart">
+                         <input type="text" id="UserGenerate" placeholder =" Username">
+                         <input type="text" id="PassGenerate" placeholder =" Password">               
+                     </div>
+                     <!-- <div class="copyIcon">
+                     <img src="Copy1.png" alt="Copy" title= "Copy Password" id="copyIcon">
+                     </div>     -->
+                 </section>
+             </div>
+             <div class="frame">
+                 <div class="userInputName">
+                     <h2>Customize your username</h2>
+                    <div class="radioContainer" onchange="userNameSelection()">
+                        <label class="radio">
+                            <input type="radio" name="userName"id = "random" class="randomCheck" checked >
+                            Random Username
+                          </label> 
+                          <label class="radio">
+                            <input type="radio" name="userName" id = "Custom" class="randomCheck" >
+                            Custom Username
+                          </label>
+                    </div>
+                     <input type="text" id="userLetter" placeholder ="A">
+                     <div class="icon">
+                        <i class="fa-solid fa-circle-info fa-xl" id="iconUserletter"title="Input the first letter of your desire Random username"></i>  
+                     </div>
+                     <div class="userChoiceRandom">
+                      <label class="checkbox">
+                        <input type="checkbox" class="randomCheck" id="upper">
+                        UPPERCASE
+                      </label>
+                      <label class="checkbox">
+                        <input type="checkbox" class="randomCheck" id="withNum">
+                        With Numbers
+                      </label>
+                     </div>
+
+                     <div class="usernameCustom">
+                        <input type="text" id="customUser" placeholder =" Custom Username">
+                     <div class="icon2">
+                        <i class="fa-solid fa-circle-info fa-xl" id="iconUserletter"title="Input your desire username"></i>
+                     </div>
+                    </div>
+                    <div class="clearBtn">
+                      <button class="button is-warning" id="clearBtn">CLEAR</button>
+                     </div>
+                    <div class="generate">
+                        <button class="button is-success" id="btnGen">Generate</button>
+                    </div>
+                 </div>
+                 <div class="passWordRandom" >
+                    <h2>Customize your password</h2>
+                    <h3>Password Length</h3>
+                    <form>
+                        <select name="Password" id="passLength" class="pick" >
+                            <option value="8">8</option>
+                            <option value="16">16</option>
+                            <option value="24">24</option>
+                            <option value="36">36</option>
+                            <option value="50">50</option>
+                        </select>
+                    </form>
+                    <div class="passRadio" onchange="userSelectionPass()">
+                        <label class="radio">
+                            <input type="radio" name="passWord"id = "easySay" class="passEasy" >
+                            Easy to say
+                          </label>
+                          <br> 
+                          <label class="radio">
+                            <input type="radio" name="passWord" id = "easyRead" class="passEasy">
+                            Easy to read
+                          </label>
+                          <br>
+                          <label class="radio">
+                            <input type="radio" name="passWord" id = "allChar" class="passEasy" checked>
+                            All the characters
+                          </label>
+                    </div>
+                    <div class="icon3">
+                        <i class="fa-solid fa-circle-info fa-xl" id="iconUserletter"title="Avoid numbers and special characters"></i>  
+                     </div>
+                     <div class="icon4">
+                        <i class="fa-solid fa-circle-info fa-xl" id="iconUserletter"title="Avoid ambiguous characters like I,1,O and 0"></i>   
+                     </div>
+                     <div class="icon5">
+                        <i class="fa-solid fa-circle-info fa-xl" id="iconUserletter"title="Any characters combinations like !, 7, h, K and |1"></i>   
+                     </div>
+                     <div class="passCheckBox" >
+                        <label class="checkbox">
+                            <input type="checkbox" class="randomPass" id="upperPass"checked>
+                            Uppercase
+                          </label>
+                          <br>
+                          <br>
+                          <label class="checkbox">
+                            <input type="checkbox" class="randomPass" id="lowerPass"checked>
+                            Lowercase
+                          </label>
+                          <br>
+                          <br>
+                          <label class="checkbox">
+                            <input type="checkbox" class="randomPass" id="numBox"checked>
+                            Numbers
+                          </label>
+                          <br>
+                          <br>
+                          <label class="checkbox">
+                            <input type="checkbox" class="randomPass"id="symBox"checked>
+                            Symbols
+                          </label>
+                     </div>
+                    <div class="generatePass">
+                        <button class="button is-success" id="btnGenPass">Generate</button>
+                    </div>
+                 </div>
+             </div> 
+             <div class="copyBtn">
+                 <button class="button is-danger is-large" id="copyBtn">SAVE TO COMPUTER (Username | Password)</button>
+             </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
