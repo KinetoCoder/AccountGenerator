@@ -3575,6 +3575,19 @@ function ambigious() {
     }
     document.getElementById("PassGenerate").value = result;
   }
+  if (
+    easyToread.checked == true &&
+    upperCase.checked == true &&
+    lowerCase.checked == true &&
+    numBox.checked == false &&
+    symBox.checked == false
+  ) {
+    combine = upper + lower;
+    for (var i = 0; i < passLength; i++) {
+      result += combine.charAt(Math.floor(Math.random() * combine.length));
+    }
+    document.getElementById("PassGenerate").value = result;
+  }
 }
 
 //All Characters
